@@ -1,0 +1,4 @@
+rootProject.name = 'dgu-ai'
+
+include 'dgu-ai-core'
+include 'dgu-ai-spring-boot-starter'

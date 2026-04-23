@@ -1,0 +1,27 @@
+plugins {
+	id 'java-library'
+}
+
+allprojects {
+	group = 'io.github.eugeneshin'
+	version = '0.0.1-SNAPSHOT'
+
+	repositories {
+		mavenCentral()
+	}
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'java-library'
+
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(17)
+		}
+	}
+
+	tasks.named('test') {
+		useJUnitPlatform()
+	}
+}
